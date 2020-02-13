@@ -316,9 +316,9 @@ ngx_http_mogilefs_handler(ngx_http_request_t *r)
 
     u->peer.log = r->connection->log;
     u->peer.log_error = NGX_ERROR_ERR;
-#if (NGX_THREADS)
-    u->peer.lock = &r->connection->lock;
-#endif
+//#if (NGX_THREADS)
+//    u->peer.lock = &r->connection->lock;
+//#endif
 
     u->output.tag = (ngx_buf_tag_t) &ngx_http_mogilefs_module;
 
